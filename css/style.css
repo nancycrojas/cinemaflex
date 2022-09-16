@@ -1,0 +1,133 @@
+:root {
+    --rojo: #e50914;
+    --fondo: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fondo);
+    font-family: 'Open Sans', sans-serif;;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+header {
+    padding: 30px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--rojo);
+    font-size: 40px;
+}
+
+header nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.active {
+    color: #fff;
+} 
+
+/*Movie main*/
+.movie-main {
+    font-size: 16px;
+    min-height: 40.62em;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0 , 0, .50) 0%, rgba(0, 0 ,0, .50) 100%), url(../assets/screen-main.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+    /*background-attachment: fixed;
+    background-repeat: no-repeat;*/
+}
+
+.movie-main .container {
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+    /*100px*/
+}
+
+.movie-main .title {
+    font-weight: 600;
+    font-size: 3.12em;
+    /*50px 16x0.4=6.4    */
+    margin-bottom: 0.4em;
+    /*20px 3.12x16=49.92 50px  */
+}
+
+.movie-main .description {
+    font-weight: normal;
+    font-size: 1em;
+    /*16px*/
+    line-height: 1.75em;
+    /*28px*/
+    max-width: 60%;
+    margin-bottom: 1.25em;
+    /*20px*/
+}
+
+.movie-main .boton{
+    background: rgba(0,0,0, 0.5);
+    /*color negro con transparencia*/
+    border: none;
+    border-radius:  0.31em;
+    /*5px*/
+    padding: 0.93em 1.87em;
+    /*15 px arriba 30px izq y dcha */
+    color: #fff;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+}
+
+.movie-main .boton:hover {
+    background: #fff;
+    color: #000;
+}
+
+.movie-main .boton i{
+    margin-right: 1.25em;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 800px) {
+    header .logo {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .movie-main {
+        font-size: 14px;
+    }
+
+    .movie-main .description {
+        max-width: 100%;
+    }
+}
